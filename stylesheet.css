@@ -20,6 +20,11 @@
   position: relative;
 }
 
+.projectimage {
+  border-radius: 50%;
+  width: 100%;
+}
+
 
 body {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
@@ -27,7 +32,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #fbf8f6;
+  background-color: #f4f4f9;
   color: #333;
 }
 
@@ -51,6 +56,37 @@ table {
   border-collapse: separate;
 }
 
+td.formatpad {
+  padding:20px;
+  width:100%;
+  vertical-align:middle;
+}
+
+#btnsection {
+  padding:20px;
+  width:100%;
+  margin: 40px 0 100px 0;
+}
+
+input[type='button'] {
+  border-radius: 4px;
+  padding:10px 25px;
+  cursor:pointer;
+  border:solid 1px #ccc;
+  font-weight:bold;
+  color:#fff;
+  background: dodgerblue;
+  text-shadow: 1px 1px 3px #666;
+  box-shadow: 0 0.625em 1em 0 rgba(30, 143, 255, 0.35);
+}
+
+input[type='button']:hover {
+  background: rgb(72, 163, 255);
+  border:solid 1px #EEEEEE;
+}
+
+
+
 /* Header Section */
 .name {
   font-size: 32px;
@@ -69,12 +105,29 @@ p a {
   margin: 0 10px;
 }
 
+h1 {
+  text-align: center;
+}
+
 /* Profile Image */
-img {
+#profilephoto {
   border-radius: 50%;
   object-fit: cover;
-  max-width: 100%;
+  width:100%;
+  max-width:100%;
 }
+
+td.photoplaceh {
+  padding:2.5%;
+  width:40%;
+  max-width:40%;
+}
+
+.photoplaceh a:hover img {
+  opacity: .9;
+  border-radius: 25% !important;
+}
+
 
 /* Section Titles */
 h2 {
@@ -83,11 +136,17 @@ h2 {
   margin: 0;
   color: #444;
 }
+/* Styling */
+.findings-text {
+  font-weight: normal;
+  font-size: 18px; /* Adjust the size as needed */
+  color: #333; /* Optional: Adjust color if needed */
+}
 
 /* Technical Background */
 ul {
   list-style-type: disc;
-  margin-left: 20px;
+  margin-left: 0;
 }
 
 li {

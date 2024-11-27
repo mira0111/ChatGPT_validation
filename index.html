@@ -10,19 +10,32 @@
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
   </head>
 
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chart.js Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.2/xlsx.full.min.js"></script> 
+</head>
+<body>
+ 
+  <table><tbody>
+      <tr>
+        <td>
+          <table><tbody>
+            <tr>
               <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Mariia Barchuk
-                </p>
-                <p>A passionate IT enthusiast and former <a href=" https://www.yorku.ca/ ">York University</a> student, with a strong foundation in web development, system design, and programming. I have honed my skills through hands-on experience and academic learning, focusing on creating efficient and scalable web applications. I am driven by a curiosity for emerging technologies and a commitment to leveraging innovative tools like ChatGPT to streamline and enhance development processes.
+                <h1>Mariia Barchuk</h1>
+
+                <p>A passionate IT enthusiast and former <a href="https://www.yorku.ca/">York University</a> student, with a strong foundation in web development, system design, and programming. I have honed my skills through hands-on experience and academic learning, focusing on creating efficient and scalable web applications. I am driven by a curiosity for emerging technologies and a commitment to leveraging innovative tools like ChatGPT to streamline and enhance development processes.
                 </p>
                
                 <p style="text-align:center">
@@ -32,17 +45,17 @@
                 </p>
               </td>
               
-              <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="images/MariiaB.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/MariiaB.jpg" class="hoverZoomLink"></a>
+              <td class="photoplaceh">
+                <a href="images/MariiaB.jpg"><img id="profilephoto" alt="profile photo" src="images/MariiaB.jpg"></a>
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table><tbody>
               <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
+              <td class="formatpad">
                 <h2>Technical Background:</h2>
                 <p>
-                  <ul style="list-style-type:disc;"></ul>
+                  <ul>
                   <li>Proficient in JavaScript, Node.js, Express.js, and database systems.</li>
                   <li>Experienced in analyzing and designing client-server architectures.</li>
                   <li>Knowledgeable in modern web standards, asynchronous communication, and internet protocols.</li>
@@ -53,61 +66,293 @@
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-            <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <source src="images/validateGPT.jpg">
-          <img src='images/validateGPT.jpg' width=100%>
-        </div>
-        <script type="text/javascript">
-          function smerf_start() {
-            document.getElementById('smerf_image').style.opacity = "1";
-          }
-
-          function smerf_stop() {
-            document.getElementById('smerf_image').style.opacity = "0";
-          }
-          smerf_stop()
-        </script>
-      </td>
+          <table><tbody>
+            <td class="formatpad" style="width:25%">
+              <div class="one">
+                <img class="projectimage" src='images/validateGPT.jpg' />
+              </div>
+            </td>
       
-      <td style="padding:20px;width:100%;vertical-align:middle">
-          <span class="papertitle">Building an Interactive Website to Validate ChatGPT Efficiency</span>
-        <br>
-
-        <p></p>
+      <td class="formatpad">
+        <h3 class="papertitle">Building an Interactive Website to Validate ChatGPT Efficiency</h3>
+        <h4>Research approach</h4> 
         <p>
-        <strong>Research approach</strong> 
-        <br>
-        <p></p>
-        This project utilizes MongoDB, Node.js, and the ChatGPT API to evaluate ChatGPT's efficiency across multiple domains. The website integrates client-server architecture to process user interactions, retrieve data, and present results dynamically. Node.js serves as the backend to manage API requests and responses, while MongoDB stores datasets and evaluation results for further analysis.
+            This project utilizes MongoDB, Node.js, and the ChatGPT API to evaluate ChatGPT's efficiency across multiple domains. The website integrates client-server architecture to process user interactions, retrieve data, and present results dynamically. Node.js serves as the backend to manage API requests and responses, while MongoDB stores datasets and evaluation results for further analysis.
         </p>
       </td>
     </tr>
 	
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <table><tbody>
       <tr>
-      <td style="padding:20px;width:100%;vertical-align:middle">
-        <strong>Dataset Overview</strong>
+      <td class="formatpad">
+        <h4>Dataset Overview</h4>
         <p>
-          The dataset consists of diverse questions from three domains: History, Social Science, and Computer Security. Each question is designed to test ChatGPT’s understanding, reasoning, and ability to provide accurate answers. The evaluation aims to identify strengths and weaknesses in ChatGPT’s performance, providing insights into its reliability across these fields.
+          The dataset used for evaluating ChatGPT consists of questions from three domains: History, Social Science, and Computer Security. 
+          These areas were selected to test ChatGPT’s ability to answer questions across different topics, providing insights into its performance.
+          The goal of the evaluation is to measure how well ChatGPT responds to questions in each area, while also identifying strengths and areas 
+          for improvement.<br><br>
+          <strong class="findings-text">Findings:</strong> <!-- Class added -->
+          <ul>
+            <li>The average time to process/save Social Science questions was 8895.96ms, which is longer than the times for History and Computer Security.</li>
+            <li>The fastest questions processed were from the History domain, with an average time of 6964.44ms.</li>
+            <li>All questions were answered with detailed explanations.</li>
+          </ul>
         </p>
       </td>
     </tr>
   </tbody></table>
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  
+    <table><tbody>
       <tr>
-      <td style="padding:20px;width:100%;vertical-align:middle">
-        <strong>Results</strong>
+      <td class="formatpad">
+        <h4>Results</h4>
         <p>
           This section includes visualizations generated from the evaluation results. Data charts and graphs present ChatGPT’s performance metrics, such as accuracy, response time, and domain-specific trends. The visualizations help to identify patterns and comparative strengths in each domain.
         </p>
       </td>
     </tr>
-  </tbody></table>
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-  
+  </tbody></table>
+
+  <table><tbody>
+    <tr>
+      <td class="formatpad">
+  <input type="file" id="excelFile" accept=".xlsx, .xls" />
+
+<!-- Canvas for the existing chart -->
+<h3>Category Data Chart</h3>
+<canvas id="myChart" width="400" height="200"></canvas>
+
+<!-- Canvas for the averages comparison chart -->
+<h3>Averages Comparison Chart</h3>
+<canvas id="averagesChart" width="400" height="200"></canvas>
+
+<!-- Canvas for the responce accuracy chart -->
+<h3>Answer Processing For History Questions PieChart</h3>
+<canvas id="accuracyChart" width="400" height="200"></canvas>
+<div id="accuracyRate"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.2/xlsx.full.min.js"></script>
+
+<script>
+  // Initialize the main chart
+  const ctx = document.getElementById('myChart').getContext('2d');
+  const myChart = new Chart(ctx, {
+    type: 'bar', // Chart type
+    data: {
+      labels: [], // Empty labels
+      datasets: [
+        {
+          label: 'Comp Security',
+          data: [],
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1
+        },
+        {
+          label: 'Social Science',
+          data: [],
+          backgroundColor: 'rgba(153, 102, 255, 0.2)',
+          borderColor: 'rgba(153, 102, 255, 1)',
+          borderWidth: 1
+        },
+        {
+          label: 'History',
+          data: [],
+          backgroundColor: 'rgba(255, 159, 64, 0.2)',
+          borderColor: 'rgba(255, 159, 64, 1)',
+          borderWidth: 1
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        title: {
+          display: true,
+          text: 'Comparison of process and save time for questions from given Subjects'
+        },
+        tooltip: {
+          mode: 'index',
+          intersect: false
+        }
+      },
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: 'Question #'
+          }
+        },
+        y: {
+          title: {
+            display: true,
+            text: 'Time (ms)'
+          },
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+// Initialize the averages comparison chart
+const avgCtx = document.getElementById('averagesChart').getContext('2d');
+const averagesChart = new Chart(avgCtx, {
+  type: 'bar', // Chart type
+  data: {
+    labels: ['Comp Security', 'Social Science', 'History'], // Static labels
+    datasets: [
+      {
+        data: [], // Empty data initially
+        backgroundColor: [
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(255, 159, 64, 0.2)'
+        ],
+        borderColor: [
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      title: {
+        display: true,
+        text: 'Averages Comparison'
+      },
+      legend: {
+        display: false // Disable the legend entirely
+      },
+      tooltip: {
+        callbacks: {
+          label: function(context) {
+            return `Value: ${context.raw}`; // Customize tooltip to only show the value
+          }
+        }
+      }
+    },
+    scales: {
+      y: {
+        title: {
+          display: true,
+          text: 'Average Time (ms)'
+        },
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+  // Handle Excel file upload
+  document.getElementById('excelFile').addEventListener('change', function (e) {
+    const file = e.target.files[0];
+
+    if (file) {
+      // Read the Excel file using SheetJS
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        const data = new Uint8Array(event.target.result);
+        const workbook = XLSX.read(data, { type: 'array' });
+
+        // Assuming the first sheet is the one you need
+        const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+        const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
+        console.log(jsonData); // Debugging output
+
+        // Assuming the first row contains the column headers
+        const headers = jsonData[0];
+        const labels = jsonData.slice(1).map(row => row[0]); // Assuming question_number is in the first column
+        const compSecurityData = jsonData.slice(1).map(row => parseFloat(row[1])); // 'Comp Security' in second column
+        const socialScienceData = jsonData.slice(1).map(row => parseFloat(row[2])); // 'Social Science' in third column
+        const historyData = jsonData.slice(1).map(row => parseFloat(row[3])); // 'History' in fourth column
+
+        // Update the main chart
+        myChart.data.labels = labels;
+        myChart.data.datasets[0].data = compSecurityData;
+        myChart.data.datasets[1].data = socialScienceData;
+        myChart.data.datasets[2].data = historyData;
+        myChart.update();
+
+        // Calculate averages for the second chart
+        const avgCompSecurity = compSecurityData.reduce((a, b) => a + b, 0) / compSecurityData.length;
+        const avgSocialScience = socialScienceData.reduce((a, b) => a + b, 0) / socialScienceData.length;
+        const avgHistory = historyData.reduce((a, b) => a + b, 0) / historyData.length;
+
+        // Update the averages chart
+        averagesChart.data.datasets[0].data = [avgCompSecurity, avgSocialScience, avgHistory];
+        averagesChart.update();
+      };
+
+      reader.readAsArrayBuffer(file);
+    }
+  });
+
+   // Initialize the chart with empty data
+   const accuracyCtx = document.getElementById('accuracyChart').getContext('2d');
+   const accuracyChart = new Chart(accuracyCtx, {
+     type: 'pie',
+     data: {
+       labels: ['Question processed and saved', 'No answer'],
+       datasets: [
+         {
+           data: [], // Empty data initially
+           backgroundColor: ['rgba(75, 192, 192, 0.8)', 'rgba(255, 99, 132, 0.8)'],
+         },
+       ],
+     },
+     options: {
+       responsive: true,
+       plugins: {
+         title: {
+           display: true,
+           text: 'Answer Processing Rate',
+         },
+       },
+     },
+   });
+ 
+   // Handle file upload
+   document.getElementById('excelFile').addEventListener('change', function (e) {
+     const file = e.target.files[0];
+     if (file) {
+       const reader = new FileReader();
+       reader.onload = function (event) {
+         const data = new Uint8Array(event.target.result);
+         const workbook = XLSX.read(data, { type: 'array' });
+         const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+         const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+ 
+         // Getting the accuracy data from the last column 
+         const accuracyData = jsonData.slice(1).map((row) => parseInt(row[row.length - 1]));
+ 
+         // Calculate saved and not saved counts
+         const savedCount = accuracyData.filter((value) => value === 1).length;
+         const notSavedCount = accuracyData.filter((value) => value === 0).length;
+ 
+         // Update chart data
+         accuracyChart.data.datasets[0].data = [savedCount, notSavedCount];
+         accuracyChart.update();
+ 
+         // Calculate and display accuracy rate
+         const accuracyRate = ((savedCount / accuracyData.length) * 100).toFixed(2);
+         document.getElementById('accuracyRate').innerHTML = `
+           <p>Processing Rate: <strong>${accuracyRate}%</strong></p>
+           <p>Total Responses: <strong>${accuracyData.length}</strong></p>
+         `;
+       };
+       reader.readAsArrayBuffer(file);
+     }
+   });
+</script>
+
+</td>
+</tr>
+</tbody></table>
+</html>
